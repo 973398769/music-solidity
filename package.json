@@ -1,0 +1,96 @@
+{
+  "name": "music-nft-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "store-asset": "node scripts/store-nft-assets.mjs",
+    "lint": "next lint",
+    "test:watch": "nodemon --ext js,sol -x 'hardhat test --show-stack-traces'"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@ethersproject/providers": "^5.6.4",
+    "@ethersproject/units": "^5.6.0",
+    "@metamask/detect-provider": "^1.2.0",
+    "@mui/icons-material": "^5.6.2",
+    "@mui/material": "^5.6.3",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "@web3-react/ledger-connector": "^6.1.9",
+    "@web3-react/network-connector": "^6.2.9",
+    "@web3-react/store": "^8.0.0-beta.0",
+    "@web3-react/walletconnect-connector": "^6.2.13",
+    "@web3-react/walletlink-connector": "^6.2.14",
+    "amplitudejs": "^5.3.2",
+    "axios": "^0.26.1",
+    "dotenv": "^10.0.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "ethers": "^5.6.4",
+    "hardhat": "^2.9.3",
+    "hardhat-gas-reporter": "^1.0.8",
+    "ipfs-http-client": "^56.0.2",
+    "next": "12.1.5",
+    "nft.storage": "^6.2.0",
+    "prop-types": "^15.8.1",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-drag-drop-files": "^2.3.5",
+    "solhint": "^3.3.7",
+    "solidity-coverage": "^0.7.20",
+    "styled-components": "^5.3.5",
+    "tailwindcss": "^3.0.24",
+    "uuid": "^8.3.2",
+    "web3modal": "^1.9.7"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "autoprefixer": "^10.4.4",
+    "chai": "^4.3.6",
+    "eslint": "8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "12.1.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "ethereum-waffle": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.19"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "arrowParens": "avoid",
+    "overrides": [
+      {
+        "files": "*.sol",
+        "options": {
+          "printWidth": 80,
+          "tabWidth": 4,
+          "useTabs": false,
+          "singleQuote": false,
+          "bracketSpacing": false,
+          "explicitTypes": "always"
+        }
+      }
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "styles/*"
+    ],
+    "delay": 2500
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}
